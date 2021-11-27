@@ -6,8 +6,10 @@ import "./App.scss"
 const App = () => {
 	return (
 		<div>
-			<Navbar />
-			<Header />
+			<div className='hero__container'>
+				<Navbar />
+				<Header />
+			</div>
 			<History />
 			<Benefits />
 			<Testimonials />
