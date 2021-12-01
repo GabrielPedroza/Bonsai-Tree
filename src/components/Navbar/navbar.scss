@@ -1,47 +1,112 @@
-.navbar {
+.c-navbar {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1rem 4rem;
+	padding: 1rem 2rem;
 
-	&__links {
-		width: 50%;
-		display: flex;
-		// flex: 1;
-		justify-content: space-between;
-		align-items: center;
-		color: #000;
-		margin: 0 1;
-
-		a:visited {
-			color: #000;
-		}
+	&__logo {
+		margin-right: 1rem;
 	}
 
 	&__logo img {
 		width: 150px;
-		height: auto;
 	}
 
-	&__links__buttons,
-	&__links__buttons button {
-		border: none;
-		border-radius: 5px;
-		padding: 0.7rem 1rem;
-		font-size: 1.2rem;
-		font-weight: bold;
-		cursor: pointer;
+	&__links {
+		display: flex;
+		flex: 1;
+		justify-content: space-between;
+		max-width: 45%;
+		align-items: center;
+	}
 
-		&--primary,
-		&--primary a {
+	&__links a {
+		color: #000;
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-around;
+		flex-grow: 0.3;
+		max-width: 55%;
+
+		&--signup {
 			background-color: #ffb6c1;
 			color: #000;
 		}
 
-		&--accent,
-		&--accent a {
+		&:nth-child(1) {
+			margin-left: 2rem;
+		}
+
+		&--signin {
 			background-color: #fff;
 			color: #000;
 		}
+
+		&:nth-child(2) {
+			margin-right: -3rem;
+		}
+	}
+
+	&__buttons a {
+		border: none;
+		border-radius: 5px;
+		padding: 0.6rem 0.9rem;
+		font-size: 1.1rem;
+		font-weight: bold;
+		cursor: pointer;
+	}
+}
+
+@media screen and (min-width: 1px) and (max-width: 549px) {
+	.c-navbar {
+		justify-content: space-between;
+		min-width: 90%;
+		margin-left: -2rem;
+		padding: 1rem 2.5rem;
+
+		&__logo {
+			margin-right: 2rem;
+		}
+
+		&__links {
+			display: none;
+		}
+
+		&__buttons {
+			display: none;
+		}
+	}
+}
+
+@media screen and (min-width: 550px) and (max-width: 749px) {
+	.c-navbar {
+		justify-content: space-between;
+		min-width: 90%;
+		margin-left: -2rem;
+
+		&__logo {
+			margin-right: 2rem;
+		}
+
+		&__links {
+			display: none;
+		}
+	}
+}
+
+@media screen and (min-width: 750px) {
+	.c-navbar {
+		justify-content: space-between;
+		min-width: 90%;
+		margin-left: -2rem;
+
+		&__logo {
+			margin-right: 4rem;
+		}
+	}
+	.js-navbar__menu {
+		display: none;
 	}
 }
