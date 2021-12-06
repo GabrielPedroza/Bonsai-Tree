@@ -4,6 +4,15 @@ import logo from "../../../public/bonsai__logo-removebg-preview.png"
 import MenuIcon from "@mui/icons-material/Menu"
 import CloseIcon from "@mui/icons-material/Close"
 
+const Menu = () => (
+	<>
+		<a href='#home'>Home</a>
+		<a href='#history'>History</a>
+		<a href='#benefits'>Benefits</a>
+		<a href='#testimonials'>Testimonials</a>
+	</>
+)
+
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false)
 	return (
@@ -12,10 +21,7 @@ const Navbar = () => {
 				<img src={logo} alt='bonsai tree logo' />
 			</div>
 			<div className='c-navbar__links'>
-				<a href='#home'>Home</a>
-				<a href='#history'>History</a>
-				<a href='#benefits'>Benefits</a>
-				<a href='#testimonials'>Testimonials</a>
+				<Menu />
 			</div>
 			<div className='c-navbar__buttons'>
 				<a
@@ -34,6 +40,13 @@ const Navbar = () => {
 					<CloseIcon onClick={() => setIsOpen(false)} />
 				) : (
 					<MenuIcon onClick={() => setIsOpen(true)} />
+				)}
+				{isOpen && (
+					<div className='l-navbar__menu--container swing-left-fwd'>
+						<div className='c-navbar__menu--links'>
+							<Menu />
+						</div>
+					</div>
 				)}
 			</div>
 		</div>

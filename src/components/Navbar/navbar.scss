@@ -57,6 +57,39 @@
 		font-weight: bold;
 		cursor: pointer;
 	}
+
+	&__menu--links {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		// top: 100%;
+		// left: 0;
+		// width: 100%;
+		z-index: 1;
+		border-radius: 5px;
+		padding: 1rem;
+		transform: rotateY(180deg);
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		animation-name: swing-left-fwd;
+		background-color: #f88193;
+	}
+
+	&__menu--links a {
+		color: #fff;
+		font-size: 1.2rem;
+		font-weight: bold;
+		cursor: pointer;
+		text-transform: uppercase;
+	}
+}
+.l-navbar__menu--container {
+	animation-name: swing-left-fwd;
+}
+
+.js-navbar__menu:hover {
+	cursor: pointer;
 }
 
 @media screen and (min-width: 1px) and (max-width: 630px) {
@@ -76,6 +109,14 @@
 
 		&__buttons {
 			display: none;
+		}
+
+		&__menu--links {
+			background-color: #ffb6c1;
+		}
+
+		&__menu--links a {
+			color: #000;
 		}
 	}
 }
