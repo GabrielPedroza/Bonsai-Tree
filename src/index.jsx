@@ -9,3 +9,5 @@ ReactDOM.render(
 	</React.StrictMode>,
 	document.getElementById("root")
 )
+
+// Contains hot module replacement (HMR) functionality.
