@@ -1,32 +1,44 @@
 import * as THREE from "three"
-import Sizes from "./Utils/Sizes"
-import EventEmitter from "./Utils/EventEmitter"
-import Time from "./Utils/Time"
-import Camera from "./Camera"
 
-export default class Experience extends EventEmitter {
-	constructor(canvas) {
-		super()
+import Sizes from "./Utils/Sizes.js"
+import Time from "./Utils/Time.js"
+import Camera from "./Camera.js"
 
-		// Gave experience global access.
-		// If you do not like this, you can pass the *this* keyword in the parameter of whichever class you wish to use it and that will gain you access.
-		// If you do not like neither, you can use a singleton.
+let instance = null
 
+export default class Experience {
+	constructor(_canvas) {
+		console.log(_canvas)
+		// Singleton
+		if (instance) {
+			return instance
+		}
+		instance = this
+
+		// Global access
 		window.experience = this
 
 		// Options
-		this.canvas = canvas
+		this.canvas = _canvas
 
 		// Setup
 		this.sizes = new Sizes()
 		this.time = new Time()
 		this.scene = new THREE.Scene()
 		this.camera = new Camera()
+		this.renderer = new THREE.WebGLRenderer({
+			canvas: this.canvas,
+			antialias: true,
+		})
 
+		this.rendererProperties()
+
+		// Resize event
 		this.sizes.on("resize", () => {
 			this.resize()
 		})
 
+		// Time tick event
 		this.time.on("tick", () => {
 			this.update()
 		})
@@ -34,9 +46,24 @@ export default class Experience extends EventEmitter {
 
 	resize() {
 		this.camera.resize()
+		this.renderer.setSize(this.sizes.width, this.sizes.height)
+		this.renderer.setPixelRatio(this.sizes.pixelRatio)
 	}
 
 	update() {
 		this.camera.update()
+		this.renderer.render(this.scene, this.camera.instance)
+	}
+
+	rendererProperties() {
+		this.renderer.physicallyCorrectLights = true
+		this.renderer.outputEncoding = THREE.sRGBEncoding
+		this.renderer.toneMapping = THREE.CineonToneMapping
+		this.renderer.toneMappingExposure = 1.75
+		this.renderer.shadowMap.enabled = true
+		this.renderer.shadowMap.type = THREE.PCFSoftShadowMap
+		this.renderer.setClearColor("#211d20")
+		this.renderer.setSize(this.sizes.width, this.sizes.height)
+		this.renderer.setPixelRatio(this.sizes.pixelRatio)
 	}
 }

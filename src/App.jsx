@@ -4,7 +4,7 @@ import { Navbar, Benefits, CTA, Testimonials } from "./components"
 import Experience from "./experience/Experience"
 import "./App.scss"
 
-const experience = new Experience(document.querySelector("#canvas"))
+const experience = new Experience(document.querySelector("canvas.webgl"))
 
 const App = () => {
 	return (

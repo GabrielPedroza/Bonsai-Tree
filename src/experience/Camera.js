@@ -1,15 +1,12 @@
 import * as THREE from "three"
-import EventEmitter from "./Utils/EventEmitter"
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
+import Experience from "./Experience.js"
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js"
 
-export default class Camera extends EventEmitter {
+export default class Camera {
 	constructor() {
-		super()
-
-		this.experience = window.experience
+		this.experience = new Experience()
 		this.sizes = this.experience.sizes
 		this.scene = this.experience.scene
-		this.camera = this.experience.camera
 		this.canvas = this.experience.canvas
 
 		this.setInstance()
@@ -23,7 +20,7 @@ export default class Camera extends EventEmitter {
 			0.1,
 			100
 		)
-		this.instance.position.set(0, 2, 8)
+		this.instance.position.set(6, 4, 8)
 		this.scene.add(this.instance)
 	}
 
@@ -33,7 +30,6 @@ export default class Camera extends EventEmitter {
 	}
 
 	resize() {
-		this.sizes = this.experience.sizes
 		this.instance.aspect = this.sizes.width / this.sizes.height
 		this.instance.updateProjectionMatrix()
 	}
