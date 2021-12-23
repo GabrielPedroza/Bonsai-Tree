@@ -1,4 +1,4 @@
-# New Project
+# Responsive 3D Bonsai Tree Website🌲
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 

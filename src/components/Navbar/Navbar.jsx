@@ -1,8 +1,6 @@
 import React, { useState } from "react"
 import "./navbar.scss"
 import logo from "../../../public/bonsai__logo-removebg-preview.png"
-import MenuIcon from "@mui/icons-material/Menu"
-import CloseIcon from "@mui/icons-material/Close"
 
 const Menu = () => (
 	<>
@@ -15,6 +13,12 @@ const Menu = () => (
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false)
+
+	const toggleMenu = () => {
+		!isOpen ? setIsOpen(true) : setIsOpen(false)
+		console.log("working")
+	}
+
 	return (
 		<div className='c-navbar'>
 			<div className='c-navbar__logo'>
@@ -35,19 +39,8 @@ const Navbar = () => {
 					Sign in
 				</a>
 			</div>
-			<div className='js-navbar__menu'>
-				{isOpen ? (
-					<CloseIcon onClick={() => setIsOpen(false)} />
-				) : (
-					<MenuIcon onClick={() => setIsOpen(true)} />
-				)}
-				{isOpen && (
-					<div className='l-navbar__menu--container swing-left-fwd'>
-						<div className='c-navbar__menu--links'>
-							<Menu />
-						</div>
-					</div>
-				)}
+			<div className={`js-menu ${isOpen ? "open" : ""}`}>
+				<div className='js-navbar__burger' onClick={toggleMenu}></div>
 			</div>
 		</div>
 	)
