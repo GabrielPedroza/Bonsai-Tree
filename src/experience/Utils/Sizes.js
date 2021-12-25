@@ -1,21 +1,28 @@
 import EventEmitter from "./EventEmitter.js"
 
 export default class Sizes extends EventEmitter {
-	constructor() {
+	constructor(_canvas) {
 		super()
 
-		// Setup
-		this.width = window.innerWidth
-		this.height = window.innerHeight
-		this.pixelRatio = Math.min(window.devicePixelRatio, 2)
+		// Viewport size
+		this.viewport = {}
+		this.$sizeViewport = _canvas
+		this.$sizeViewport.style.width = "40vw"
+		this.$sizeViewport.style.height = "40vh"
 
 		// Resize event
-		window.addEventListener("resize", () => {
-			this.width = window.innerWidth
-			this.height = window.innerHeight
-			this.pixelRatio = Math.min(window.devicePixelRatio, 2)
+		window.addEventListener("resize", () => this.resize)
 
-			this.trigger("resize")
-		})
+		this.resize()
+	}
+
+	/**
+	 * Resize
+	 */
+	resize() {
+		this.viewport.width = this.$sizeViewport.offsetWidth
+		this.viewport.height = this.$sizeViewport.offsetHeight
+
+		this.trigger("resize")
 	}
 }

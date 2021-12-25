@@ -22,7 +22,7 @@ export default class Experience {
 		this.canvas = _canvas
 
 		// Setup
-		this.sizes = new Sizes()
+		this.sizes = new Sizes(_canvas)
 		this.time = new Time()
 		this.scene = new THREE.Scene()
 		this.camera = new Camera()
@@ -41,11 +41,11 @@ export default class Experience {
 
 	resize() {
 		this.camera.resize()
-		// this.renderer.resize()
+		this.renderer.resize()
 	}
 
 	update() {
 		this.camera.update()
-		// this.renderer.update()
+		this.renderer.update()
 	}
 }

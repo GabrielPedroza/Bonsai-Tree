@@ -30,10 +30,22 @@
 		justify-content: center;
 		flex-grow: 0.6;
 		max-width: 100%;
+		will-change: transform;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		transition: all 0.3s;
 
 		&--signup {
-			background-color: #705df2;
+			background: #705df2;
 			color: #fff;
+
+			&:hover {
+				background: #431f7c;
+			}
+
+			&:active {
+				background: #000;
+			}
 		}
 
 		&:nth-child(1) {
