@@ -3,9 +3,9 @@ import React from "react"
 
 const Header = () => {
 	return (
-		<div className='l-flex'>
+		<div>
 			<h1>Header</h1>
-			<canvas className='l-webgl'></canvas>
+			<p>Lorem ipsum dolor sit amet,</p>
 		</div>
 	)
 }
