@@ -3,6 +3,7 @@ import { Header, History, Footer } from "./containers"
 import { Navbar, Benefits, CTA, Testimonials } from "./components"
 import Experience from "./experience/Experience"
 import "./App.scss"
+import "./containers/Header/header.scss"
 
 const WebGLExperience = () => {
 	const canvas = React.useRef()
@@ -29,18 +30,20 @@ const WebGLExperience = () => {
 
 const App = () => {
 	return (
-		<div>
+		<>
 			<Navbar />
-			<div className='l-flex'>
-				<Header />
-				<WebGLExperience />
+			<div className='l-container'>
+				<div className='l-flex'>
+					<WebGLExperience />
+					<Header />
+				</div>
+				<History />
+				<Benefits />
+				<Testimonials />
+				<CTA />
+				<Footer />
 			</div>
-			<History />
-			<Benefits />
-			<Testimonials />
-			<CTA />
-			<Footer />
-		</div>
+		</>
 	)
 }
 

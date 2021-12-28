@@ -1,4 +1,21 @@
 .l-flex {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-around;
+}
+
+.l-header__container {
+	margin: 1rem 0;
+	padding: 1rem 2rem;
+}
+
+.c-header {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+
+	&__desc {
+		font-size: 1.5rem;
+		line-height: 1.6;
+		word-spacing: 0.9;
+	}
 }

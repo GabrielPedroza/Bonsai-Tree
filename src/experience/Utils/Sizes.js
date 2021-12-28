@@ -7,8 +7,9 @@ export default class Sizes extends EventEmitter {
 		// Viewport size
 		this.viewport = {}
 		this.$sizeViewport = _canvas
-		this.$sizeViewport.style.width = "40vw"
-		this.$sizeViewport.style.height = "40vh"
+		this.$sizeViewport.style.width = "93%"
+		this.$sizeViewport.style.height = "35vh"
+		this.$sizeViewport.style.margin = "0 auto"
 
 		// Resize event
 		window.addEventListener("resize", () => this.resize)
