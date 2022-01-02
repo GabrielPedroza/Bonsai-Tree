@@ -32,17 +32,15 @@ const App = () => {
 	return (
 		<>
 			<Navbar />
-			<div className='l-container'>
-				<div className='l-flex'>
-					<WebGLExperience />
-					<Header />
-				</div>
-				<History />
-				<Benefits />
-				<Testimonials />
-				<CTA />
-				<Footer />
+			<div className='l-flex'>
+				<WebGLExperience className='webgl l-container__component' />
+				<Header />
 			</div>
+			<History />
+			<Benefits />
+			<Testimonials />
+			<CTA />
+			<Footer />
 		</>
 	)
 }

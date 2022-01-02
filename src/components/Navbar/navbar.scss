@@ -74,6 +74,7 @@
 	background: #333;
 	border-radius: 10px;
 	box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+	will-change: auto;
 	transition: all 0.5s ease-in-out;
 
 	&::before,

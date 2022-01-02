@@ -4,7 +4,7 @@ import "../../App.scss"
 
 const Header = () => {
 	return (
-		<div className='l-header__container'>
+		<div className='l-container'>
 			<h1 className='c-header'>Sacred Bonsai Tree</h1>
 			<p className='c-header__desc'>
 				Fully-matured and healthy, we, <b>Bonsai Premium Design</b>, are selling
