@@ -1,5 +1,4 @@
 import EventEmitter from "./EventEmitter.js"
-// import variables from "../../containers/Header/_variables.scss"
 export default class Sizes extends EventEmitter {
 	constructor(_canvas) {
 		super()

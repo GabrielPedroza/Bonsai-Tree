@@ -1,6 +1,6 @@
 import * as React from "react"
-import { Header, History, Footer } from "./containers"
-import { Navbar, Benefits, CTA, Testimonials } from "./components"
+import { Header, Footer } from "./containers"
+import { Navbar, Benefits, CTA, Testimonials, History } from "./components"
 import Experience from "./experience/Experience"
 import "./App.scss"
 import "./containers/Header/header.scss"
@@ -32,12 +32,14 @@ const App = () => {
 	return (
 		<>
 			<Navbar />
-			<div className='l-flex'>
+			<div className='l-flex__header'>
 				<WebGLExperience className='webgl l-container__component' />
 				<Header />
 			</div>
-			<History />
-			<Benefits />
+			<div className='l-flex__body'>
+				<History />
+				<Benefits />
+			</div>
 			<Testimonials />
 			<CTA />
 			<Footer />
