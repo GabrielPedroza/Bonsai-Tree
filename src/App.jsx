@@ -33,10 +33,10 @@ const App = () => {
 		<>
 			<Navbar />
 			<div className='l-flex__header'>
-				<WebGLExperience className='webgl l-container__component' />
+				<WebGLExperience />
 				<Header />
 			</div>
-			<div className='l-flex__body'>
+			<div className='l-flex__info l-container__info'>
 				<History />
 				<Benefits />
 			</div>

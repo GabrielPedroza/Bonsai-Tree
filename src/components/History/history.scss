@@ -1,0 +1,44 @@
+.c-header {
+	margin: 2rem auto;
+	text-align: center;
+	font-size: 2.75rem;
+
+	&:after {
+		content: "";
+		display: block;
+		margin: 0 auto;
+		width: 25%;
+		padding-top: 20px;
+		border-bottom: 1px solid #e6e6e6;
+	}
+}
+
+.c-desc {
+	font-size: 1.5rem;
+	line-height: 1.6;
+	word-spacing: 0.9;
+}
+
+.c-img {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	margin-left: 1rem;
+	border-radius: 10% / 50%;
+}
+
+.c-header__container {
+	display: flex;
+}
+
+@media screen and (max-width: 635px) {
+	.c-header__container {
+		flex-direction: column;
+	}
+
+	.c-img {
+		margin: 2rem auto;
+		border-radius: 25% 10%;
+		width: 80%;
+	}
+}
