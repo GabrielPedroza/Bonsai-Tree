@@ -16,7 +16,6 @@ const Navbar = () => {
 
 	const toggleMenu = () => {
 		!isOpen ? setIsOpen(true) : setIsOpen(false)
-		console.log("working")
 	}
 
 	return (
