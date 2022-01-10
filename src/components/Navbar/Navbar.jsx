@@ -38,8 +38,8 @@ const Navbar = () => {
 					Sign in
 				</a>
 			</div>
-			<div className={`js-menu ${isOpen ? "open" : ""}`}>
-				<div className='js-navbar__burger' onClick={toggleMenu}></div>
+			<div className={`js-menu ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
+				<div className='js-navbar__burger'></div>
 			</div>
 		</div>
 	)
