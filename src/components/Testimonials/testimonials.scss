@@ -73,9 +73,10 @@
 	min-width: 200px;
 	max-width: 350px;
 	width: 40%;
-	will-change: auto;
 	padding: 1rem;
 	margin-bottom: 2rem;
+	will-change: auto;
+	transition: ease-in-out 250ms;
 
 	&:hover {
 		transform: translateY(-5px);
