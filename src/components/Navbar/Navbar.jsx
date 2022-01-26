@@ -30,6 +30,10 @@ const Navbar = () => {
 				<a
 					className='c-navbar__buttons c-navbar__buttons--signup'
 					href='#signup'>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
 					Sign up
 				</a>
 				<a
