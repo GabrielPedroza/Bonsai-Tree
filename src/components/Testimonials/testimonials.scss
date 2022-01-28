@@ -39,6 +39,118 @@
 	color: #fff;
 }
 
+.l-testimonial__container {
+	min-width: 200px;
+	max-width: 350px;
+	width: 80%;
+	padding: 1rem;
+	margin-bottom: 2rem;
+	position: relative;
+	overflow: hidden;
+	will-change: auto;
+	transition: ease-in-out 250ms;
+
+	&:hover {
+		transition-delay: 0.5s;
+		transform: translateY(-5px);
+		box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+	}
+
+	.span-1 {
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 1px;
+		background: #fff;
+		position: absolute;
+		transition: 0.5s ease;
+	}
+
+	.span-2 {
+		top: 0;
+		left: 0;
+		width: 1px;
+		height: 0;
+		background: #fff;
+		position: absolute;
+		transition: 0.5s ease;
+	}
+
+	.span-3 {
+		bottom: 0;
+		right: 0;
+		width: 0;
+		height: 1px;
+		background: #fff;
+		position: absolute;
+		transition: 0.5s ease;
+	}
+
+	.span-4 {
+		bottom: 0;
+		right: 0;
+		width: 1px;
+		height: 0;
+		background: #fff;
+		position: absolute;
+		transition: 0.5s ease;
+	}
+}
+
+// .l-testimonial__container span {
+// 	will-change: auto;
+//
+
+// 	.span-1 {
+// 		top: 0;
+// 		left: 0;
+// 		width: 0;
+// 		height: 1px;
+// 		background: #fff;
+// 	}
+
+// 	.span-2 {
+// 		top: 0;
+// 		left: 0;
+// 		width: 1px;
+// 		height: 0;
+// 		background: #fff;
+// 	}
+
+// 	.span-3 {
+// 		bottom: 0;
+// 		right: 0;
+// 		width: 0;
+// 		height: 1px;
+// 		background: #fff;
+// 	}
+
+// 	.span-4 {
+// 		bottom: 0;
+// 		right: 0;
+// 		width: 1px;
+// 		height: 0;
+// 		background: #fff;
+// 	}
+// }
+
+.l-testimonial__container:hover .span-1 {
+	width: 100%;
+	transform: translateX(101%);
+}
+.l-testimonial__container:hover .span-3 {
+	width: 100%;
+	transform: translateX(-101%);
+}
+.l-testimonial__container:hover .span-2 {
+	height: 100%;
+	transform: translateY(101%);
+}
+.l-testimonial__container:hover .span-4 {
+	height: 100%;
+	transform: translateY(-101%);
+}
+
 .c-testimonials__container {
 	display: flex;
 	flex-direction: column;
@@ -67,21 +179,6 @@
 
 .l-testimonial__removed {
 	display: none;
-}
-
-.l-testimonial__container {
-	min-width: 200px;
-	max-width: 350px;
-	width: 80%;
-	padding: 1rem;
-	margin-bottom: 2rem;
-	will-change: auto;
-	transition: ease-in-out 250ms;
-
-	&:hover {
-		transform: translateY(-5px);
-		box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
-	}
 }
 
 .c-testimonial__name {

@@ -7,6 +7,10 @@ const Testimonial = ({ name, photo, review, displayNone }) => {
 			<img className='c-testimonial__img' src={photo} alt='Image of person' />
 			<h3 className='c-testimonial__name'>{`${name} says...`}</h3>
 			<p className='c-testimonial__review'>{review}</p>
+			<span className='span-1'></span>
+			<span className='span-2'></span>
+			<span className='span-3'></span>
+			<span className='span-4'></span>
 		</div>
 	)
 }
