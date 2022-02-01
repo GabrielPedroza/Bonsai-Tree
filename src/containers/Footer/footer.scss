@@ -48,32 +48,34 @@
 .c-phone-number {
 	&:hover {
 		text-decoration: underline;
-        cursor: pointer;
+		cursor: pointer;
 	}
 }
 
 .c-footer__info--hover {
-    margin-right: 1rem;
-    margin-bottom: 2rem;
+	margin-right: 1rem;
+	margin-bottom: 2rem;
 }
 
 .c-footer__phone-number {
-    padding-bottom: 2rem;
-    font-size: 1.2rem;
+	padding-bottom: 2rem;
+	font-size: 1.2rem;
 }
 
 .c-phone-number {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .l-footer__info {
 	display: flex;
-    flex-direction: column;
-    height: 300px;
-    flex-wrap: wrap;
-    max-width: 900px;
+	flex-direction: column;
+	height: 300px;
+	flex-wrap: wrap;
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 .l-footer__container {
 	padding: 4rem 1rem;
+	text-align: center;
 }
