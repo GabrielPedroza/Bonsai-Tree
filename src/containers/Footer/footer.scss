@@ -1,0 +1,79 @@
+.l-footer__container {
+	/* ff 3.6+ */
+	background: -moz-linear-gradient(
+		180deg,
+		rgba(23, 10, 43, 1) 0%,
+		rgba(20, 7, 20, 1) 100%
+	);
+
+	/* safari 5.1+,chrome 10+ */
+	background: -webkit-linear-gradient(
+		180deg,
+		rgba(23, 10, 43, 1) 0%,
+		rgba(20, 7, 20, 1) 100%
+	);
+
+	/* opera 11.10+ */
+	background: -o-linear-gradient(
+		180deg,
+		rgba(23, 10, 43, 1) 0%,
+		rgba(20, 7, 20, 1) 100%
+	);
+
+	/* ie 6-9 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#140714', endColorstr='#170A2B', GradientType=1 );
+
+	/* ie 10+ */
+	background: -ms-linear-gradient(
+		180deg,
+		rgba(23, 10, 43, 1) 0%,
+		rgba(20, 7, 20, 1) 100%
+	);
+
+	/* global 94%+ browsers support */
+	background: linear-gradient(
+		180deg,
+		rgba(23, 10, 43, 1) 0%,
+		rgba(20, 7, 20, 1) 100%
+	);
+}
+
+.c-footer__info--hover,
+.c-footer__phone-number {
+	color: #e3e3e3;
+	text-decoration: none;
+}
+
+.c-footer__info--hover,
+.c-phone-number {
+	&:hover {
+		text-decoration: underline;
+        cursor: pointer;
+	}
+}
+
+.c-footer__info--hover {
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+
+.c-footer__phone-number {
+    padding-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.c-phone-number {
+    font-weight: bold;
+}
+
+.l-footer__info {
+	display: flex;
+    flex-direction: column;
+    height: 300px;
+    flex-wrap: wrap;
+    max-width: 900px;
+}
+
+.l-footer__container {
+	padding: 4rem 1rem;
+}
