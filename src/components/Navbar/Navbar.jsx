@@ -18,6 +18,8 @@ const Navbar = () => {
 		!isOpen ? setIsOpen(true) : setIsOpen(false)
 	}
 
+	if (isOpen) {}
+
 	return (
 		<div className='c-navbar'>
 			<div className='c-navbar__logo'>
@@ -30,10 +32,10 @@ const Navbar = () => {
 				<a
 					className='c-navbar__buttons c-navbar__buttons--signup'
 					href='#signup'>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
 					Sign up
 				</a>
 				<a
