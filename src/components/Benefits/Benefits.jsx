@@ -12,10 +12,7 @@ const Benefits = () => {
 					alt='The country of japan'
 				/>
 				<p className='c-desc c-desc__benefits'>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Necessitatibus ad pariatur dignissimos itaque dolorum totam dolor vel
-					perferendis assumenda molestiae dolorem magnam, enim veritatis eos
-					ipsum porro doloribus quo adipisci.
+					The benefits are endless. It is proven to give you peace and prosperity when you are surrounded by any bonsai tree. It is also proven that it can give you patience because of how time-consuming it is to grow and maintain a tree.
 				</p>
 			</div>
 		</div>
