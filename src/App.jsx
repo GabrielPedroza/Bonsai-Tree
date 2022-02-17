@@ -10,7 +10,6 @@ const WebGLExperience = () => {
 
 	React.useEffect(() => {
 		let scheduledFrame
-
 		const experience = new Experience(canvas.current)
 
 		const animate = () => {

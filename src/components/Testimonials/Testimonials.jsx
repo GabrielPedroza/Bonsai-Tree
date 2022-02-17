@@ -16,6 +16,7 @@ const Testimonial = ({ name, photo, review, displayNone }) => {
 }
 
 /* random default "verified" review && all props has to be string */
+
 Testimonial.defaultProps = {
 	photo: "/random-person1.jpg",
 	name: "Bob",
