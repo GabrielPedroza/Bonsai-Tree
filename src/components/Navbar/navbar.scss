@@ -3,6 +3,7 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem 2rem;
+	// position: absolute;
 
 	&__logo {
 		margin-right: 1rem;
@@ -248,7 +249,7 @@
 @media screen and (min-width: 795px) {
 	.c-navbar {
 		justify-content: space-around;
-		max-width: 1500px;
+		max-width: 1400px;
 		margin: 0 auto;
 
 		&__logo {

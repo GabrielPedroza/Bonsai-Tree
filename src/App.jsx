@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Header, Footer } from "./containers"
 import { Navbar, Benefits, CTA, Testimonials, History } from "./components"
-import Experience from "./experience/Experience"
+import Experience from "./Experience/Experience"
 import "./App.scss"
 import "./containers/Header/header.scss"
 
@@ -30,11 +30,11 @@ const WebGLExperience = () => {
 const App = () => {
 	return (
 		<>
+			{/* <div className='l-flex__header'> */}
 			<Navbar />
-			<div className='l-flex__header'>
-				<WebGLExperience />
-				<Header />
-			</div>
+			<WebGLExperience />
+			{/* <Header /> */}
+			{/* </div> */}
 			<div className='l-flex__info l-container__info'>
 				<History />
 				<Benefits />
