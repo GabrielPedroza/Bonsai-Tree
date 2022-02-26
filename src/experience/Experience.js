@@ -69,7 +69,7 @@ export default class Experience {
 				child.geometry.dispose()
 
 				// Loop through the material properties
-				for (const key in child.material) {
+				for (key in child.material) {
 					const value = child.material[key]
 
 					// Test if there is a dispose function

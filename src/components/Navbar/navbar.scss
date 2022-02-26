@@ -4,12 +4,13 @@
 	align-items: center;
 	padding: 1rem 2rem;
 	// position: absolute;
+	background-color: #211d20;
 
 	&__logo {
 		margin-right: 1rem;
 
 		& img {
-			width: 150px;
+			width: 75px;
 		}
 	}
 
@@ -19,9 +20,11 @@
 		justify-content: space-between;
 		max-width: 45%;
 		align-items: center;
+		will-change: auto;
 
 		& a {
-			color: #000;
+			color: #fff;
+			transition: all 0.3s;
 
 			&:hover {
 				color: #705df2;
@@ -35,7 +38,7 @@
 		justify-content: center;
 		flex-grow: 0.6;
 		max-width: 100%;
-		will-change: transform;
+		will-change: auto;
 		-webkit-transition: all 0.3s;
 		-moz-transition: all 0.3s;
 		transition: all 0.3s;
@@ -83,11 +86,11 @@
 		}
 
 		&--signin {
-			background-color: #fff;
-			color: #000;
+			background-color: #211d20;
+			color: #fff;
 
 			&:hover {
-				background-color: rgba(0, 0, 0, 0.05);
+				background-color: rgba(255, 255, 255, 0.1);
 			}
 		}
 
@@ -111,28 +114,28 @@
 		left: 0;
 		width: 0;
 		height: 2px;
-		background: rgba(51, 23, 95, 1);
+		background: white;
 	}
 	&:nth-child(2) {
 		top: 0;
 		left: 0;
 		width: 2px;
 		height: 0;
-		background: rgba(51, 23, 95, 1);
+		background: white;
 	}
 	&:nth-child(3) {
 		bottom: 0;
 		right: 0;
 		width: 0;
 		height: 2px;
-		background: rgba(51, 23, 95, 1);
+		background: white;
 	}
 	&:nth-child(4) {
 		bottom: 0;
 		right: 0;
 		width: 2px;
 		height: 0;
-		background: rgba(51, 23, 95, 1);
+		background: white;
 	}
 }
 
@@ -156,7 +159,7 @@
 .js-navbar__burger {
 	width: 30px;
 	height: 5px;
-	background: #333;
+	background: #fff;
 	border-radius: 10px;
 	box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
 	will-change: auto;
@@ -167,7 +170,7 @@
 		content: "";
 		width: 40px;
 		height: 5px;
-		background: #333;
+		background: #fff;
 		border-radius: 10px;
 		box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
 		transition: all 0.5s ease-in-out;

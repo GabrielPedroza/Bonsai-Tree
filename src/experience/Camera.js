@@ -23,10 +23,10 @@ export default class Camera {
 			35,
 			this.sizes.width / this.sizes.height,
 			0.1,
-			100000
+			100
 		)
 
-		this.instance.position.set(3, 2, 10)
+		this.instance.position.set(3, 2, 11)
 		this.scene.add(this.instance)
 
 		if (this.debug.active) {
@@ -58,7 +58,7 @@ export default class Camera {
 	setControls() {
 		this.controls = new OrbitControls(this.instance, this.canvas)
 		this.controls.enableDamping = true
-		this.controls.enableZoom = false
+		this.controls.enableZoom = true
 	}
 
 	resize() {

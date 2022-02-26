@@ -1,7 +1,7 @@
 import * as THREE from "three"
 import Experience from "../Experience.js"
 
-export default class Fox {
+export default class Bonsai {
 	constructor() {
 		this.experience = new Experience()
 		this.scene = this.experience.scene
@@ -11,19 +11,19 @@ export default class Fox {
 
 		// Debug
 		if (this.debug.active) {
-			this.debugFolder = this.debug.ui.addFolder("fox")
+			this.debugFolder = this.debug.ui.addFolder("bonsai")
 		}
 
 		// Resource
-		this.resource = this.resources.items.foxModel
+		this.resource = this.resources.items.bonsaiTree
 
 		this.setModel()
-		this.setAnimation()
+		// this.setAnimation()
 	}
 
 	setModel() {
 		this.model = this.resource.scene
-		this.model.scale.set(0.02, 0.02, 0.02)
+		// this.model.scale.set(0.02, 0.02, 0.02)
 		this.scene.add(this.model)
 
 		this.model.traverse((child) => {
@@ -87,6 +87,7 @@ export default class Fox {
 	}
 
 	update() {
-		this.animation.mixer.update(this.time.delta * 0.001)
+		// this.animation.mixer.update(this.time.delta * 0.0005)
+		return null
 	}
 }

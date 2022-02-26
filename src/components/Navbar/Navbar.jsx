@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import "./navbar.scss"
-import logo from "../../../public/bonsai__logo-removebg-preview.png"
+import logo from "../../../public/Screen_Shot_2022-02-23_at_1.15.36_PM-removebg-preview.png"
 
 const Menu = () => (
 	<>
@@ -18,7 +18,8 @@ const Navbar = () => {
 		!isOpen ? setIsOpen(true) : setIsOpen(false)
 	}
 
-	if (isOpen) {}
+	if (isOpen) {
+	}
 
 	return (
 		<div className='c-navbar'>
