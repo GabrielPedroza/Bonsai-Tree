@@ -1,13 +1,28 @@
 export default [
 	{
-		name: "grassColorTexture",
+		name: "pebblesColorTexture",
 		type: "texture",
-		path: "textures/dirt/color.jpg",
+		path: "/textures/pebbles/Pebbles_024_BaseColor.jpg",
 	},
 	{
-		name: "grassNormalTexture",
+		name: "pebblesNormalTexture",
 		type: "texture",
-		path: "textures/dirt/normal.jpg",
+		path: "/textures/pebbles/Pebbles_024_Normal.jpg",
+	},
+	{
+		name: "pebblesAOTexture",
+		type: "texture",
+		path: "/textures/pebbles/Pebbles_024_AmbientOcclusion.jpg",
+	},
+	{
+		name: "pebblesHeightTexture",
+		type: "texture",
+		path: "/textures/pebbles/Pebbles_024_Height.png",
+	},
+	{
+		name: "pebblesRoughnessTexture",
+		type: "texture",
+		path: "/textures/pebbles/Pebbles_024_Roughness.jpg",
 	},
 
 	{
