@@ -23,7 +23,8 @@ export default class Bonsai {
 
 	setModel() {
 		this.model = this.resource.scene
-		// this.model.scale.set(0.02, 0.02, 0.02)
+		this.model.scale.set(1.3, 1.3, 1.3)
+		this.model.position.set(0, -1, 0)
 		this.scene.add(this.model)
 
 		this.model.traverse((child) => {

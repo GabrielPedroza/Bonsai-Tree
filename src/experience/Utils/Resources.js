@@ -29,17 +29,14 @@ export default class Resources extends EventEmitter {
 			if (source.type === "gltfModel" || source.type === "glbModel") {
 				this.loaders.gltfLoader.load(source.path, (file) => {
 					this.sourceLoaded(source, file)
-					console.log(source, file)
 				})
 			} else if (source.type === "texture") {
 				this.loaders.textureLoader.load(source.path, (file) => {
 					this.sourceLoaded(source, file)
-					console.log(source, file)
 				})
 			} else if (source.type === "cubeTexture") {
 				this.loaders.cubeTextureLoader.load(source.path, (file) => {
 					this.sourceLoaded(source, file)
-					console.log(source, file)
 				})
 			}
 		}

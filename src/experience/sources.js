@@ -33,6 +33,6 @@ export default [
 	{
 		name: "bonsaiTree",
 		type: "glbModel",
-		path: "models/bonsaiTree/bonsai.glb",
+		path: "models/bonsaiTree/bonsai.gltf",
 	},
 ]
