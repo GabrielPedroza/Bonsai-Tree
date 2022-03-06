@@ -11,7 +11,7 @@ const History = () => {
 		gsap.from(["#l-header__ref", "#l-header__desc--ref"], {
 			scrollTrigger: "#l-header__ref",
 			y: 30,
-			delay: 0.4,
+			delay: 0.5,
 			duration: 0.5,
 			opacity: 0,
 			ease: Power3.easeInOut,
@@ -24,7 +24,7 @@ const History = () => {
 				History
 			</h3>
 			<div className='c-header__container'>
-				<img className='c-img' src='/TkUR4G.jpeg' alt='The country of japan' />
+				<img className='c-img__history' src='/TkUR4G.jpeg' alt='The country of japan' />
 				<p className='c-desc' id='l-header__desc--ref'>
 					Bonsai is a Japanese word meaning "tree" and is a Japanese plant that
 					is native to Japan. It is a type of flowering plant with a large,

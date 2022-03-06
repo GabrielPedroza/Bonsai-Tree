@@ -6,6 +6,11 @@ export default class Floor {
 		this.experience = new Experience()
 		this.scene = this.experience.scene
 		this.resources = this.experience.resources
+		this.debug = this.experience.debug
+
+		if (this.debug.active) {
+			this.debugFolder = this.debug.ui.addFolder("floor")
+		}
 
 		this.setGeometry()
 		this.setTextures()
@@ -64,6 +69,31 @@ export default class Floor {
 		this.mesh.rotation.x = -Math.PI * 0.5
 		this.mesh.position.y = -1
 		this.mesh.receiveShadow = true
+
+		if (this.debug.active) {
+			this.debugFolder
+				.add(this.mesh.position, "x")
+				.min(-5)
+				.max(5)
+				.step(0.01)
+				.name("floorX")
+		}
+		if (this.debug.active) {
+			this.debugFolder
+				.add(this.mesh.position, "y")
+				.min(-5)
+				.max(5)
+				.step(0.01)
+				.name("floorY")
+		}
+		if (this.debug.active) {
+			this.debugFolder
+				.add(this.mesh.position, "z")
+				.min(-5)
+				.max(5)
+				.step(0.01)
+				.name("floorZ")
+		}
 
 		this.mesh.geometry.setAttribute(
 			"uv2",

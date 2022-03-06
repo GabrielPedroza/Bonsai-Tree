@@ -10,9 +10,9 @@ export default class Bonsai {
 		this.debug = this.experience.debug
 
 		// Debug
-		if (this.debug.active) {
-			this.debugFolder = this.debug.ui.addFolder("bonsai")
-		}
+		// if (this.debug.active) {
+		// 	this.debugFolder = this.debug.ui.addFolder("bonsai")
+		// }
 
 		// Resource
 		this.resource = this.resources.items.bonsaiTree

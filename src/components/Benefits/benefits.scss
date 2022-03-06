@@ -9,3 +9,24 @@
 #l-benefits__ref {
 	padding-top: 5rem;
 }
+
+.c-img__benefits {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	margin: 1rem;
+	border-radius: 10% / 50%;
+}
+
+@media screen and (max-width: 635px) {
+	.c-header__container--benefits {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.c-img__benefits {
+		margin: 2rem auto;
+		border-radius: 25% 10%;
+		width: 80%;
+	}
+}

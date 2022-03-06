@@ -11,7 +11,7 @@ const Benefits = () => {
 		gsap.from(["#l-benefits__ref", "#l-benefits__desc--ref"], {
 			scrollTrigger: "#l-benefits__ref",
 			y: 30,
-			delay: 0.4,
+			delay: 0.5,
 			duration: 0.5,
 			opacity: 0,
 			ease: Power3.easeInOut,
@@ -24,18 +24,18 @@ const Benefits = () => {
 			<h3 className='c-header' id='l-benefits__ref'>
 				Benefits
 			</h3>
-			<div className='c-header__container'>
+			<div className='c-header__container--benefits'>
+				<img
+					className='c-img__benefits' id='l-img__benefits'
+					src='/joe-petisce-tree-arts.jpeg'
+					alt='The country of japan'
+				/>
 				<p className='c-desc c-desc__benefits' id='l-benefits__desc--ref'>
 					The benefits are endless. It is proven to give you peace and
 					prosperity when you are surrounded by any bonsai tree. It is also
 					proven that it can give you patience because of how time-consuming it
 					is to grow and maintain a tree.
 				</p>
-				<img
-					className='c-img' id='l-img__benefits'
-					src='/joe-petisce-tree-arts.jpeg'
-					alt='The country of japan'
-				/>
 			</div>
 		</div>
 	)
