@@ -1,4 +1,7 @@
-import React from "react"
+import React, { useEffect } from "react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { Power3 } from "gsap/gsap-core"
 import "./testimonials.scss"
 
 const Testimonial = ({ name, photo, review, displayNone }) => {
@@ -25,10 +28,23 @@ Testimonial.defaultProps = {
 }
 
 const Testimonials = () => {
+
+	gsap.registerPlugin(ScrollTrigger)
+
+	useEffect(() => {
+		gsap.from("#l-testimonials__ref", {
+			scrollTrigger: "#l-testimonials__ref",
+			y: 30,
+			delay: 0.4,
+			duration: 0.5,
+			opacity: 0,
+			ease: Power3.easeInOut,
+		})
+	}, [])
 	return (
 		<>
 			<div className='l-testimonials__container'>
-				<h2 className='c-testimonials__title'>Testimonials</h2>
+				<h2 className='c-testimonials__title' id='l-testimonials__ref'>Testimonials</h2>
 				<div className='c-testimonials__container'>
 					{/* no using an array of objects in json and mapping over it, its static data */}
 					{/* if it was dynamic data, i would add overflow-y: scroll to the review with scroll-behavior: smooth. possibly add word limit */}

@@ -1,24 +1,34 @@
-import React, { useState } from "react"
+import React, { useState, useRef, useEffect } from "react"
+import gsap from "gsap"
+import Power3 from "gsap/gsap-core"
 import "./navbar.scss"
 import logo from "../../../public/Screen_Shot_2022-02-23_at_1.15.36_PM-removebg-preview.png"
-
-const Menu = () => (
-	<>
-		<a href='#home'>Home</a>
-		<a href='#history'>History</a>
-		<a href='#benefits'>Benefits</a>
-		<a href='#testimonials'>Testimonials</a>
-	</>
-)
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false)
 
+	let ref = useRef(null)
+	let ref2 = useRef(null)
+	let ref3 = useRef(null)
+	let ref4 = useRef(null)
+
+	useEffect(() => {
+		gsap.from([ref, ref2, ref3, ref4], {
+			y: 30,
+			delay: 0.2,
+			duration: 0.3,
+			opacity: 0,
+			ease: Power3.easeInOut,
+			stagger: 0.2,
+		})
+	}, [])
+
+	// useEffect(() => {
+	// 	gsap.from()
+	// }, [])
+
 	const toggleMenu = () => {
 		!isOpen ? setIsOpen(true) : setIsOpen(false)
-	}
-
-	if (isOpen) {
 	}
 
 	return (
@@ -27,7 +37,20 @@ const Navbar = () => {
 				<img src={logo} alt='bonsai tree logo' />
 			</div>
 			<div className='c-navbar__links'>
-				<Menu />
+				<>
+					<a ref={(el) => (ref = el)} href='#home'>
+						Home
+					</a>
+					<a ref={(el) => (ref2 = el)} href='#history'>
+						History
+					</a>
+					<a ref={(el) => (ref3 = el)} href='#benefits'>
+						Benefits
+					</a>
+					<a ref={(el) => (ref4 = el)} href='#testimonials'>
+						Testimonials
+					</a>
+				</>
 			</div>
 			<div className='c-navbar__buttons'>
 				<a
@@ -52,4 +75,20 @@ const Navbar = () => {
 	)
 }
 
+// const Menu = () => (
+// 	<>
+// 		<a ref={(el) => (ref = el)} href='#home'>
+// 			Home
+// 		</a>
+// 		<a ref={(el) => (ref = el)} href='#history'>
+// 			History
+// 		</a>
+// 		<a ref={(el) => (ref = el)} href='#benefits'>
+// 			Benefits
+// 		</a>
+// 		<a ref={(el) => (ref = el)} href='#testimonials'>
+// 			Testimonials
+// 		</a>
+// 	</>
+// )
 export default Navbar
