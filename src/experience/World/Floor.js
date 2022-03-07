@@ -19,7 +19,7 @@ export default class Floor {
 	}
 
 	setGeometry() {
-		this.geometry = new THREE.CircleGeometry(1, 100)
+		this.geometry = new THREE.PlaneGeometry(2.5, 1.5, 100)
 	}
 
 	setTextures() {
@@ -58,7 +58,7 @@ export default class Floor {
 			normalMap: this.textures.normal,
 			aoMap: this.textures.ao,
 			displacementMap: this.textures.height,
-			displacementScale: 0.1,
+			displacementScale: 0.15,
 			roughnessMap: this.textures.roughness,
 			metalness: 0,
 		})
@@ -67,7 +67,9 @@ export default class Floor {
 	setMesh() {
 		this.mesh = new THREE.Mesh(this.geometry, this.material)
 		this.mesh.rotation.x = -Math.PI * 0.5
-		this.mesh.position.y = -1
+		this.mesh.position.x = -0.286
+		this.mesh.position.y = -0.9
+		this.mesh.position.z = 0.083
 		this.mesh.receiveShadow = true
 
 		if (this.debug.active) {
@@ -75,7 +77,7 @@ export default class Floor {
 				.add(this.mesh.position, "x")
 				.min(-5)
 				.max(5)
-				.step(0.01)
+				.step(0.001)
 				.name("floorX")
 		}
 		if (this.debug.active) {
@@ -83,7 +85,7 @@ export default class Floor {
 				.add(this.mesh.position, "y")
 				.min(-5)
 				.max(5)
-				.step(0.01)
+				.step(0.001)
 				.name("floorY")
 		}
 		if (this.debug.active) {
@@ -91,7 +93,7 @@ export default class Floor {
 				.add(this.mesh.position, "z")
 				.min(-5)
 				.max(5)
-				.step(0.01)
+				.step(0.001)
 				.name("floorZ")
 		}
 

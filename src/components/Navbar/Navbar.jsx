@@ -23,9 +23,19 @@ const Navbar = () => {
 		})
 	}, [])
 
-	// useEffect(() => {
-	// 	gsap.from()
-	// }, [])
+	let signupRef = useRef(null)
+	let signinRef = useRef(null)
+
+	useEffect(() => {
+		gsap.from([signupRef, signinRef], {
+			x: 30,
+			delay: 1.1,
+			duration: 0.3,
+			opacity: 0,
+			ease: Power3.easeInOut,
+			stagger: 0.2,
+		})
+	}, [])
 
 	const toggleMenu = () => {
 		!isOpen ? setIsOpen(true) : setIsOpen(false)
@@ -55,6 +65,7 @@ const Navbar = () => {
 			<div className='c-navbar__buttons'>
 				<a
 					className='c-navbar__buttons c-navbar__buttons--signup'
+					ref={(el) => signupRef = el}
 					href='#signup'>
 					<span></span>
 					<span></span>
@@ -64,6 +75,7 @@ const Navbar = () => {
 				</a>
 				<a
 					className='c-navbar__buttons c-navbar__buttons--signin'
+					ref={(el) => signinRef = el}
 					href='#signin'>
 					Sign in
 				</a>
