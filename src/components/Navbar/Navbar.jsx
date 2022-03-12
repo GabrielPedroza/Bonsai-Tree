@@ -3,10 +3,9 @@ import gsap from "gsap"
 import Power3 from "gsap/gsap-core"
 import "./navbar.scss"
 import logo from "../../../public/Screen_Shot_2022-02-23_at_1.15.36_PM-removebg-preview.png"
+import { useNavigate } from "react-router-dom"
 
-const Navbar = () => {
-	const [isOpen, setIsOpen] = useState(false)
-
+const Menu = () => {
 	let ref = useRef(null)
 	let ref2 = useRef(null)
 	let ref3 = useRef(null)
@@ -22,6 +21,30 @@ const Navbar = () => {
 			stagger: 0.2,
 		})
 	}, [])
+
+	return (
+		<>
+			<a ref={(el) => (ref = el)} href='#home'>
+				Home
+			</a>
+			<a ref={(el) => (ref2 = el)} href='#history'>
+				History
+			</a>
+			<a ref={(el) => (ref3 = el)} href='#benefits'>
+				Benefits
+			</a>
+			<a ref={(el) => (ref4 = el)} href='#testimonials'>
+				Testimonials
+			</a>
+		</>
+	)
+}
+
+const Navbar = () => {
+	const [isOpen, setIsOpen] = useState(false)
+
+	const signinNavigate = useNavigate()
+	const signupNavigate = useNavigate()
 
 	let signupRef = useRef(null)
 	let signinRef = useRef(null)
@@ -47,26 +70,13 @@ const Navbar = () => {
 				<img src={logo} alt='bonsai tree logo' />
 			</div>
 			<div className='c-navbar__links'>
-				<>
-					<a ref={(el) => (ref = el)} href='#home'>
-						Home
-					</a>
-					<a ref={(el) => (ref2 = el)} href='#history'>
-						History
-					</a>
-					<a ref={(el) => (ref3 = el)} href='#benefits'>
-						Benefits
-					</a>
-					<a ref={(el) => (ref4 = el)} href='#testimonials'>
-						Testimonials
-					</a>
-				</>
+				<Menu />
 			</div>
 			<div className='c-navbar__buttons'>
 				<a
 					className='c-navbar__buttons c-navbar__buttons--signup'
-					ref={(el) => signupRef = el}
-					href='#signup'>
+					ref={(el) => (signupRef = el)}
+					onClick={() => signupNavigate("/signup")}>
 					<span></span>
 					<span></span>
 					<span></span>
@@ -75,8 +85,8 @@ const Navbar = () => {
 				</a>
 				<a
 					className='c-navbar__buttons c-navbar__buttons--signin'
-					ref={(el) => signinRef = el}
-					href='#signin'>
+					ref={(el) => (signinRef = el)}
+					onClick={() => signinNavigate("/signin")}>
 					Sign in
 				</a>
 			</div>
@@ -87,20 +97,4 @@ const Navbar = () => {
 	)
 }
 
-// const Menu = () => (
-// 	<>
-// 		<a ref={(el) => (ref = el)} href='#home'>
-// 			Home
-// 		</a>
-// 		<a ref={(el) => (ref = el)} href='#history'>
-// 			History
-// 		</a>
-// 		<a ref={(el) => (ref = el)} href='#benefits'>
-// 			Benefits
-// 		</a>
-// 		<a ref={(el) => (ref = el)} href='#testimonials'>
-// 			Testimonials
-// 		</a>
-// 	</>
-// )
 export default Navbar

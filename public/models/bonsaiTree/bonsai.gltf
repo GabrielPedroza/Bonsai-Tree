@@ -10890,7 +10890,7 @@
                     "index" : 3
                 },
                 "metallicFactor" : 0,
-                "roughnessFactor" : 0.5
+                "roughnessFactor" : 0.6659750938415527
             }
         },
         {
@@ -11027,7 +11027,7 @@
         {
             "bufferView" : 4,
             "componentType" : 5126,
-            "count" : 1077,
+            "count" : 2560,
             "max" : [
                 -1.3146971464157104,
                 0.31835076212882996,
@@ -11043,19 +11043,19 @@
         {
             "bufferView" : 5,
             "componentType" : 5126,
-            "count" : 1077,
+            "count" : 2560,
             "type" : "VEC3"
         },
         {
             "bufferView" : 6,
             "componentType" : 5126,
-            "count" : 1077,
+            "count" : 2560,
             "type" : "VEC2"
         },
         {
             "bufferView" : 7,
             "componentType" : 5123,
-            "count" : 3444,
+            "count" : 5748,
             "type" : "SCALAR"
         },
         {
@@ -11116,43 +11116,43 @@
         },
         {
             "buffer" : 0,
-            "byteLength" : 12924,
+            "byteLength" : 30720,
             "byteOffset" : 163712
         },
         {
             "buffer" : 0,
-            "byteLength" : 12924,
-            "byteOffset" : 176636
+            "byteLength" : 30720,
+            "byteOffset" : 194432
         },
         {
             "buffer" : 0,
-            "byteLength" : 8616,
-            "byteOffset" : 189560
+            "byteLength" : 20480,
+            "byteOffset" : 225152
         },
         {
             "buffer" : 0,
-            "byteLength" : 6888,
-            "byteOffset" : 198176
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 2484,
-            "byteOffset" : 205064
+            "byteLength" : 11496,
+            "byteOffset" : 245632
         },
         {
             "buffer" : 0,
             "byteLength" : 2484,
-            "byteOffset" : 207548
+            "byteOffset" : 257128
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2484,
+            "byteOffset" : 259612
         },
         {
             "buffer" : 0,
             "byteLength" : 1656,
-            "byteOffset" : 210032
+            "byteOffset" : 262096
         },
         {
             "buffer" : 0,
             "byteLength" : 1122,
-            "byteOffset" : 211688
+            "byteOffset" : 263752
         }
     ],
     "samplers" : [
@@ -11169,7 +11169,7 @@
     ],
     "buffers" : [
         {
-            "byteLength" : 212812,
+            "byteLength" : 264876,
             "uri" : "bonsai.bin"
         }
     ]

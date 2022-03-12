@@ -24,7 +24,11 @@ const History = () => {
 				History
 			</h3>
 			<div className='c-header__container'>
-				<img className='c-img__history' src='/TkUR4G.jpeg' alt='The country of japan' />
+				<img
+					className='c-img__history'
+					src='/TkUR4G.jpeg'
+					alt='The country of japan'
+				/>
 				<p className='c-desc' id='l-header__desc--ref'>
 					Bonsai is a Japanese word meaning "tree" and is a Japanese plant that
 					is native to Japan. It is a type of flowering plant with a large,

@@ -27,27 +27,27 @@ export default class Floor {
 
 		this.textures.color = this.resources.items.pebblesColorTexture
 		this.textures.color.encoding = THREE.sRGBEncoding
-		this.textures.color.repeat.set(1.5, 1.5)
+		this.textures.color.repeat.set(3, 3)
 		this.textures.color.wrapS = THREE.RepeatWrapping
 		this.textures.color.wrapT = THREE.RepeatWrapping
 
 		this.textures.normal = this.resources.items.pebblesNormalTexture
-		this.textures.normal.repeat.set(1.5, 1.5)
+		this.textures.normal.repeat.set(3, 3)
 		this.textures.normal.wrapS = THREE.RepeatWrapping
 		this.textures.normal.wrapT = THREE.RepeatWrapping
 
 		this.textures.ao = this.resources.items.pebblesAOTexture
-		this.textures.ao.repeat.set(1.5, 1.5)
+		this.textures.ao.repeat.set(3, 3)
 		this.textures.ao.wrapS = THREE.RepeatWrapping
 		this.textures.ao.wrapT = THREE.RepeatWrapping
 
 		this.textures.height = this.resources.items.pebblesHeightTexture
-		this.textures.height.repeat.set(1.5, 1.5)
+		this.textures.height.repeat.set(3, 3)
 		this.textures.height.wrapS = THREE.RepeatWrapping
 		this.textures.height.wrapT = THREE.RepeatWrapping
 
 		this.textures.roughness = this.resources.items.pebblesRoughnessTexture
-		this.textures.roughness.repeat.set(1.5, 1.5)
+		this.textures.roughness.repeat.set(3, 3)
 		this.textures.roughness.wrapS = THREE.RepeatWrapping
 		this.textures.roughness.wrapT = THREE.RepeatWrapping
 	}
@@ -58,7 +58,7 @@ export default class Floor {
 			normalMap: this.textures.normal,
 			aoMap: this.textures.ao,
 			displacementMap: this.textures.height,
-			displacementScale: 0.15,
+			displacementScale: 0.14,
 			roughnessMap: this.textures.roughness,
 			metalness: 0,
 		})

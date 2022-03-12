@@ -28,7 +28,6 @@ Testimonial.defaultProps = {
 }
 
 const Testimonials = () => {
-
 	let ref = useRef()
 
 	gsap.registerPlugin(ScrollTrigger)
@@ -46,7 +45,11 @@ const Testimonials = () => {
 	return (
 		<>
 			<div className='l-testimonials__container'>
-				<h2 ref={el => ref = el} className='c-testimonials__title'>Testimonials</h2>
+				<h2
+					ref={(el) => (ref = el)}
+					className='c-testimonials__title'>
+					Testimonials
+				</h2>
 				<div className='c-testimonials__container'>
 					{/* no using an array of objects in json and mapping over it, its static data */}
 					{/* if it was dynamic data, i would add overflow-y: scroll to the review with scroll-behavior: smooth. possibly add word limit */}

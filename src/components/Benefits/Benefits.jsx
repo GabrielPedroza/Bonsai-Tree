@@ -26,7 +26,8 @@ const Benefits = () => {
 			</h3>
 			<div className='c-header__container--benefits'>
 				<img
-					className='c-img__benefits' id='l-img__benefits'
+					className='c-img__benefits'
+					id='l-img__benefits'
 					src='/joe-petisce-tree-arts.jpeg'
 					alt='The country of japan'
 				/>

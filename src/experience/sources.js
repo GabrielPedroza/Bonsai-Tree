@@ -24,12 +24,6 @@ export default [
 		type: "texture",
 		path: "/textures/pebbles/Pebbles_024_Roughness.jpg",
 	},
-
-	{
-		name: "treeTexture",
-		type: "texture",
-		path: "textures/tree/treetexture.jpg",
-	},
 	{
 		name: "bonsaiTree",
 		type: "glbModel",
