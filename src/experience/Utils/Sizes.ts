@@ -1,7 +1,14 @@
 import EventEmitter from "./EventEmitter.js"
 
 export default class Sizes extends EventEmitter {
-	constructor(_canvas) {
+
+	$sizeViewport: HTMLCanvasElement
+	width: number
+	height: number
+	pixelRatio: number
+	$mq1: MediaQueryList
+
+	constructor(_canvas: HTMLCanvasElement) {
 		super()
 
 		// Setup

@@ -20,13 +20,11 @@ export default class Experience {
 		}
 		instance = this
 
-		// Global access
+		// global access
 		window.experience = this
 
-		// Options
 		this.canvas = _canvas
 
-		// Setup
 		this.debug = new Debug()
 		this.sizes = new Sizes(_canvas)
 		this.time = new Time()
@@ -36,12 +34,10 @@ export default class Experience {
 		this.renderer = new Renderer()
 		this.world = new World()
 
-		// Resize event
 		this.sizes.on("resize", () => {
 			this.resize()
 		})
 
-		// Time tick event
 		this.time.on("tick", () => {
 			this.update()
 		})
