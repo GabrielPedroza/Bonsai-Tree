@@ -44,9 +44,9 @@ const WebGLExperience = () => {
         };
         requestAnimationFrame(animate);
         return () => {
-            var _a;
+            var _a, _b;
             cancelAnimationFrame(scheduledFrame);
-            (_a = experience.dispose) === null || _a === void 0 ? void 0 : _a.call(experience);
+            (_b = (_a = experience.dispose) === null || _a === void 0 ? void 0 : _a.call(experience)) !== null && _b !== void 0 ? _b : console.error("The experience was not able to dispose on render");
         };
     }, []);
     return <canvas ref={canvas}/>;

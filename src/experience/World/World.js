@@ -4,6 +4,7 @@ import Floor from "./Floor.js"
 import Bonsai from "./Bonsai.js"
 
 export default class World {
+
 	constructor() {
 		this.experience = new Experience()
 		this.scene = this.experience.scene

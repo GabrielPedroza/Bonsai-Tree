@@ -7,13 +7,33 @@ import Camera from "./Camera.js"
 import Renderer from "./Renderer.js"
 import World from "./World/World.js"
 import Resources from "./Utils/Resources.js"
+import type { ResourceStructure } from "./Utils/Resources"
 
-import sources from "./sources.js"
+import sources from "./sources"
 
-let instance = null
+let instance: Experience | null = null
+
+declare global {
+	interface Window {
+		experience: Experience
+	}
+}
 
 export default class Experience {
-	constructor(_canvas) {
+	canvas: HTMLCanvasElement
+	debug: Debug
+	sizes: Sizes
+	time: Time
+	scene: THREE.Scene
+	resources: Resources
+	camera: Camera
+	renderer: Renderer
+	world: World
+	sources: ResourceStructure
+
+	experience: Experience
+
+	constructor(_canvas: HTMLCanvasElement) {
 		// Singleton
 		if (instance) {
 			return instance
@@ -64,7 +84,7 @@ export default class Experience {
 				child.geometry.dispose()
 
 				// Loop through the material properties
-				for (key in child.material) {
+				for (const key in child.material) {
 					const value = child.material[key]
 
 					// Test if there is a dispose function
@@ -75,9 +95,12 @@ export default class Experience {
 			}
 		})
 
-		this.camera.controls.dispose()
-		this.renderer.instance.dispose()
+		this.camera.controls?.dispose() ??
+			console.error("Controls not found on dispose")
+		this.renderer.instance?.dispose() ??
+			console.error("Renderer not found on dispose")
 
-		if (this.debug.active) this.debug.ui.destroy()
+		if (this.debug.active)
+			this.debug.ui?.destroy() ?? console.error("Debug UI not found on dispose")
 	}
 }

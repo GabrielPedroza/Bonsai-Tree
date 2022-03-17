@@ -34,7 +34,7 @@ const Camera_js_1 = __importDefault(require("./Camera.js"));
 const Renderer_js_1 = __importDefault(require("./Renderer.js"));
 const World_js_1 = __importDefault(require("./World/World.js"));
 const Resources_js_1 = __importDefault(require("./Utils/Resources.js"));
-const sources_js_1 = __importDefault(require("./sources.js"));
+const sources_1 = __importDefault(require("./sources"));
 let instance = null;
 class Experience {
     constructor(_canvas) {
@@ -48,7 +48,7 @@ class Experience {
         this.sizes = new Sizes_js_1.default(_canvas);
         this.time = new Time_js_1.default();
         this.scene = new THREE.Scene();
-        this.resources = new Resources_js_1.default(sources_js_1.default);
+        this.resources = new Resources_js_1.default(sources_1.default);
         this.camera = new Camera_js_1.default();
         this.renderer = new Renderer_js_1.default();
         this.world = new World_js_1.default();
@@ -68,12 +68,13 @@ class Experience {
         this.renderer.update();
     }
     destroy() {
+        var _a, _b, _c, _d, _e, _f;
         this.sizes.off("resize");
         this.time.off("tick");
         this.scene.traverse((child) => {
             if (child instanceof THREE.Mesh) {
                 child.geometry.dispose();
-                for (key in child.material) {
+                for (const key in child.material) {
                     const value = child.material[key];
                     if (value && typeof value.dispose === "function") {
                         value.dispose();
@@ -81,10 +82,10 @@ class Experience {
                 }
             }
         });
-        this.camera.controls.dispose();
-        this.renderer.instance.dispose();
+        (_b = (_a = this.camera.controls) === null || _a === void 0 ? void 0 : _a.dispose()) !== null && _b !== void 0 ? _b : console.error("Controls not found on dispose");
+        (_d = (_c = this.renderer.instance) === null || _c === void 0 ? void 0 : _c.dispose()) !== null && _d !== void 0 ? _d : console.error("Renderer not found on dispose");
         if (this.debug.active)
-            this.debug.ui.destroy();
+            (_f = (_e = this.debug.ui) === null || _e === void 0 ? void 0 : _e.destroy()) !== null && _f !== void 0 ? _f : console.error("Debug UI not found on dispose");
     }
 }
 exports.default = Experience;

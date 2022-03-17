@@ -21,7 +21,8 @@ const WebGLExperience = () => {
 
 		return () => {
 			cancelAnimationFrame(scheduledFrame)
-			experience.dispose?.() /* optional chaining to make sure method is a function before attempting to dispose.*/
+			experience.dispose?.() ??
+				console.error("The experience was not able to dispose on render")
 		}
 	}, [])
 

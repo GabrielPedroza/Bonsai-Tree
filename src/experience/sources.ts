@@ -1,4 +1,8 @@
-export default [
+const sources: Array<{
+	name: string
+	type: "texture" | "glbModel" | "cubeTexture" | "gltfModel"
+	path: string
+}> = [
 	{
 		name: "pebblesColorTexture",
 		type: "texture",
@@ -26,7 +30,24 @@ export default [
 	},
 	{
 		name: "bonsaiTree",
-		type: "glbModel",
+		type: "gltfModel",
 		path: "models/bonsaiTree/bonsai.gltf",
 	},
+	{
+		name: "treeTexture",
+		type: "texture",
+		path: "models/bonsaiTree/treetexture.jpg",
+	},
+	{
+		name: "brickTexture",
+		type: "texture",
+		path: "models/bonsaiTree/Tiles_Terracotta_007_basecolor.jpg",
+	},
+	{
+		name: "leafImage",
+		type: "texture",
+		path: "models/bonsaiTree/pink-leaf-removebg-preview.png",
+	},
 ]
+
+export default sources

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = [
+const sources = [
     {
         name: "pebblesColorTexture",
         type: "texture",
@@ -28,8 +28,24 @@ exports.default = [
     },
     {
         name: "bonsaiTree",
-        type: "glbModel",
+        type: "gltfModel",
         path: "models/bonsaiTree/bonsai.gltf",
     },
+    {
+        name: "treeTexture",
+        type: "texture",
+        path: "models/bonsaiTree/treetexture.jpg",
+    },
+    {
+        name: "brickTexture",
+        type: "texture",
+        path: "models/bonsaiTree/Tiles_Terracotta_007_basecolor.jpg",
+    },
+    {
+        name: "leafImage",
+        type: "texture",
+        path: "models/bonsaiTree/pink-leaf-removebg-preview.png",
+    },
 ];
+exports.default = sources;
 //# sourceMappingURL=sources.js.map
