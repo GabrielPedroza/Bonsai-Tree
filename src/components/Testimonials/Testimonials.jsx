@@ -78,8 +78,8 @@ const Testimonials = () => {
 					/>
 					<Testimonial
 						photo='/random-person5.jpeg'
-						name='Donald'
-						review='This is very cool. Very nice. I might buy 100 more of these trees.'
+						name='Ben'
+						review="Ho ho ho! Yes! This is what I've been looking for in the newspaper!!!"
 						displayNone='l-testimonial__removed'
 					/>
 					<Testimonial
