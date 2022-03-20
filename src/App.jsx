@@ -4,7 +4,6 @@ import { Footer } from "./containers"
 import { Navbar, Benefits, CTA, Testimonials, History } from "./components"
 import Experience from "./Experience/Experience"
 import "./App.scss"
-import "./containers/Header/header.scss"
 
 const WebGLExperience = () => {
 	const canvas = React.useRef()
@@ -24,7 +23,7 @@ const WebGLExperience = () => {
 			experience.dispose?.() ??
 				console.error("The experience was not able to dispose on render")
 		}
-	}, [])
+	})
 
 	return <canvas ref={canvas} />
 }
@@ -47,7 +46,6 @@ const App = () => {
 				<Navbar />
 				<WebGLExperience />
 			</div>
-			{/* <Header /> */}
 			<div className='l-flex__info l-container__info'>
 				<History />
 				<Benefits />
