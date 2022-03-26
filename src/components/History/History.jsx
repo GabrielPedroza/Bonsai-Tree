@@ -19,7 +19,7 @@ const History = () => {
 		})
 	}, [])
 	return (
-		<div className='l-HandB__container'>
+		<div className='l-HandB__container' id='history'>
 			<h3 className='c-header' id='l-header__ref'>
 				History
 			</h3>

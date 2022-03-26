@@ -5,18 +5,18 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
 const react_router_dom_1 = require("react-router-dom");
-require("./CTA.scss");
-const CTA = () => {
+function Error() {
     const navigate = (0, react_router_dom_1.useNavigate)();
-    return (<div className='l-CTA__container'>
-			<a className='c-CTA__button' onClick={() => navigate("/buyBonsai")}>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				🌲Buy a Bonsai Tree🌲
-			</a>
+    return (<div>
+			<h1>Error</h1>
+			<p>
+				Sorry, an error has occurred. Please head back to{" "}
+				<a style={{ cursor: "pointer", color: "red" }} onClick={() => navigate("/")}>
+					home
+				</a>{" "}
+				and try again.
+			</p>
 		</div>);
-};
-exports.default = CTA;
-//# sourceMappingURL=CTA.js.map
+}
+exports.default = Error;
+//# sourceMappingURL=Error.js.map

@@ -67,18 +67,17 @@ class Experience {
         this.camera.update();
         this.renderer.update();
     }
-    destroy() {
+    dispose() {
         var _a, _b, _c, _d, _e, _f;
         this.sizes.off("resize");
         this.time.off("tick");
         this.scene.traverse((child) => {
+            var _a;
             if (child instanceof THREE.Mesh) {
                 child.geometry.dispose();
                 for (const key in child.material) {
                     const value = child.material[key];
-                    if (value && typeof value.dispose === "function") {
-                        value.dispose();
-                    }
+                    (_a = value.dispose) === null || _a === void 0 ? void 0 : _a.call(value);
                 }
             }
         });

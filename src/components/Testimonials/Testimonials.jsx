@@ -44,10 +44,8 @@ const Testimonials = () => {
 	}, [])
 	return (
 		<>
-			<div className='l-testimonials__container'>
-				<h2
-					ref={(el) => (ref = el)}
-					className='c-testimonials__title'>
+			<div className='l-testimonials__container' id='testimonials'>
+				<h2 ref={(el) => (ref = el)} className='c-testimonials__title'>
 					Testimonials
 				</h2>
 				<div className='c-testimonials__container'>

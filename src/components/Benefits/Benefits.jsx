@@ -24,7 +24,7 @@ const Benefits = () => {
 			<h3 className='c-header' id='l-benefits__ref'>
 				Benefits
 			</h3>
-			<div className='c-header__container--benefits'>
+			<div className='c-header__container--benefits' id='benefits'>
 				<img
 					className='c-img__benefits'
 					id='l-img__benefits'

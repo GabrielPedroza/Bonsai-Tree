@@ -6,23 +6,10 @@ import Experience from "./Experience/Experience"
 import "./App.scss"
 
 const WebGLExperience = () => {
-	const canvas = React.useRef()
+	let canvas = React.useRef()
 
-	React.useEffect(() => {
-		let scheduledFrame
-		const experience = new Experience(canvas.current)
-
-		const animate = () => {
-			scheduledFrame = requestAnimationFrame(animate)
-			experience.update()
-		}
-		requestAnimationFrame(animate)
-
-		return () => {
-			cancelAnimationFrame(scheduledFrame)
-			experience.dispose?.() ??
-				console.error("The experience was not able to dispose on render")
-		}
+	React.useLayoutEffect(() => {
+		canvas = new Experience(canvas.current)
 	})
 
 	return <canvas ref={canvas} />

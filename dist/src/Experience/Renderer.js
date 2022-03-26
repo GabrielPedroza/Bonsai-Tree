@@ -59,6 +59,9 @@ class Renderer {
     update() {
         this.instance.render(this.scene, this.camera.instance);
     }
+    dispose() {
+        this.instance.dispose();
+    }
 }
 exports.default = Renderer;
 //# sourceMappingURL=Renderer.js.map

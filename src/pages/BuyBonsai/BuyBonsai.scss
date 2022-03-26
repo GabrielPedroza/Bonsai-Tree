@@ -1,0 +1,85 @@
+.l-bonsai__container {
+	width: 100vw;
+	height: 100vh;
+	/* ff 3.6+ */
+	background: -moz-linear-gradient(
+		180deg,
+		rgba(112, 93, 242, 1) 0%,
+		rgba(67, 31, 124, 1) 100%
+	);
+
+	/* safari 5.1+,chrome 10+ */
+	background: -webkit-linear-gradient(
+		180deg,
+		rgba(112, 93, 242, 1) 0%,
+		rgba(67, 31, 124, 1) 100%
+	);
+
+	/* opera 11.10+ */
+	background: -o-linear-gradient(
+		180deg,
+		rgba(112, 93, 242, 1) 0%,
+		rgba(67, 31, 124, 1) 100%
+	);
+
+	/* ie 6-9 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#431F7C', endColorstr='#705DF2', GradientType=1 );
+
+	/* ie 10+ */
+	background: -ms-linear-gradient(
+		180deg,
+		rgba(112, 93, 242, 1) 0%,
+		rgba(67, 31, 124, 1) 100%
+	);
+
+	/* global 94%+ browsers support */
+	background: linear-gradient(
+		180deg,
+		rgba(112, 93, 242, 1) 0%,
+		rgba(67, 31, 124, 1) 100%
+	);
+}
+
+.l-bonsai__input {
+	background: transparent;
+	border: none;
+	height: 3rem;
+	width: 30vw;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+
+	&::placeholder {
+		color: #fff;
+		opacity: 0.75;
+	}
+}
+
+.l-form__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 70vh;
+}
+
+.c-return__home {
+	font-size: 1rem;
+	color: whitesmoke;
+	cursor: pointer;
+}
+
+#c-bonsai__submit {
+	width: 30vw;
+	min-width: 200px;
+}
+
+.l-flex-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+}

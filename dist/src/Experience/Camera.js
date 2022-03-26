@@ -83,6 +83,9 @@ class Camera {
     update() {
         this.controls.update();
     }
+    dispose() {
+        this.controls.dispose();
+    }
 }
 exports.default = Camera;
 //# sourceMappingURL=Camera.js.map

@@ -46,22 +46,22 @@ class Resources extends EventEmitter_js_1.default {
         this.loaders.cubeTextureLoader = new THREE.CubeTextureLoader();
     }
     startLoading() {
-        var _a, _b, _c, _d, _e, _f;
+        var _a, _b, _c;
         for (const source of this.sources) {
-            if (source.type === "gltfModel" || source.type === "glbModel") {
-                (_b = (_a = this.loaders.gltfLoader) === null || _a === void 0 ? void 0 : _a.load(source.path, (file) => {
+            if (source.type === "gltfModel") {
+                (_a = this.loaders.gltfLoader) === null || _a === void 0 ? void 0 : _a.load(source.path, (file) => {
                     this.sourceLoaded(source, file);
-                })) !== null && _b !== void 0 ? _b : console.error("GLTFLoader not found");
+                });
             }
             else if (source.type === "texture") {
-                (_d = (_c = this.loaders.textureLoader) === null || _c === void 0 ? void 0 : _c.load(source.path, (file) => {
+                (_b = this.loaders.textureLoader) === null || _b === void 0 ? void 0 : _b.load(source.path, (file) => {
                     this.sourceLoaded(source, file);
-                })) !== null && _d !== void 0 ? _d : console.error("TextureLoader not found");
+                });
             }
             else if (source.type === "cubeTexture") {
-                (_f = (_e = this.loaders.cubeTextureLoader) === null || _e === void 0 ? void 0 : _e.load(source.path, (file) => {
+                (_c = this.loaders.cubeTextureLoader) === null || _c === void 0 ? void 0 : _c.load(source.path, (file) => {
                     this.sourceLoaded(source, file);
-                })) !== null && _f !== void 0 ? _f : console.error("CubeTextureLoader not found");
+                });
             }
         }
     }

@@ -1,0 +1,78 @@
+.l-signin__container {
+	/* ff 3.6+ */
+	background: -moz-radial-gradient(
+		circle at 50% 50%,
+		rgba(112, 93, 242, 1) 0%,
+		rgba(67, 31, 124, 1) 100%
+	);
+
+	/* safari 5.1+,chrome 10+ */
+	background: -webkit-radial-gradient(
+		circle at 50% 50%,
+		rgba(112, 93, 242, 1) 0%,
+		rgba(67, 31, 124, 1) 100%
+	);
+
+	/* opera 11.10+ */
+	background: -o-radial-gradient(
+		circle at 50% 50%,
+		rgba(112, 93, 242, 1) 0%,
+		rgba(67, 31, 124, 1) 100%
+	);
+
+	/* ie 10+ */
+	background: -ms-radial-gradient(
+		circle at 50% 50%,
+		rgba(112, 93, 242, 1) 0%,
+		rgba(67, 31, 124, 1) 100%
+	);
+
+	/* global 92%+ browsers support */
+	background: radial-gradient(
+		circle at 50% 50%,
+		rgba(112, 93, 242, 1) 0%,
+		rgba(67, 31, 124, 1) 100%
+	);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.c-signin__container {
+	height: 50vh;
+	width: 50vw;
+	padding: 2rem;
+}
+
+.l-label {
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #fff;
+	margin-bottom: 1rem;
+}
+
+.l-input {
+	width: 100%;
+	height: 3rem;
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	color: #fff;
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+.l-submit {
+	width: 100%;
+	height: 3rem;
+	border: none;
+	border-radius: 5px;
+	// background: #fff;
+	color: #211d20;
+	font-size: 1.5rem;
+	font-weight: bold;
+	cursor: pointer;
+}

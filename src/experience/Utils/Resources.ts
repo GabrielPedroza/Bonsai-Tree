@@ -47,21 +47,21 @@ export default class Resources extends EventEmitter {
 					(file: { [k: string]: any }) => {
 						this.sourceLoaded(source, file)
 					}
-				) ?? console.error("GLTFLoader not found")
+				)
 			} else if (source.type === "texture") {
 				this.loaders.textureLoader?.load(
 					source.path,
 					(file: { [k: string]: any }) => {
 						this.sourceLoaded(source, file)
 					}
-				) ?? console.error("TextureLoader not found")
+				)
 			} else if (source.type === "cubeTexture") {
 				this.loaders.cubeTextureLoader?.load(
 					source.path,
 					(file: { [k: string]: any }) => {
 						this.sourceLoaded(source, file)
 					}
-				) ?? console.error("CubeTextureLoader not found")
+				)
 			}
 		}
 	}

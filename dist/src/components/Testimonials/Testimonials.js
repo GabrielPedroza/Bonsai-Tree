@@ -72,7 +72,7 @@ const Testimonials = () => {
 					<Testimonial photo='/random-person2.jpeg' name='Elon' review="This bonsai tree is amazing. This will be the first thing I send to Mars. I'm about to post this on twitter!"/>
 					<Testimonial photo='/random-person3.jpeg' name='Andrew' review='This bonsai tree made me run for president and I successfully did it! I am the only president to be a veteran of both the Revolutionary War and the War of 1812!' displayNone='l-testimonial__removed'/>
 					<Testimonial photo='/random-person4.jpeg' name='Barack' review='Let me be clear folks... this product... is genuinely amazing. God bless america for this creation.' displayNone='l-testimonial__removed'/>
-					<Testimonial photo='/random-person5.jpeg' name='Donald' review='This is very cool. Very nice. I might buy 100 more of these trees.' displayNone='l-testimonial__removed'/>
+					<Testimonial photo='/random-person5.jpeg' name='Ben' review="Ho ho ho! Yes! This is what I've been looking for in the newspaper!!!" displayNone='l-testimonial__removed'/>
 					<Testimonial photo='/random-person6.jpeg' name='Doge' review='Woof woof woof! Woof woof woof woof woof woof woof. To the moon!'/>
 					<Testimonial photo='/random-person7.jpeg' name='Shiba' review='I pretty much agree with everything Doge said but I am going to the moon with the bonsai tree instead.'/>
 				</div>
